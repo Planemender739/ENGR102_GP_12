@@ -1,0 +1,91 @@
+# 9x12 sheet of paper with 1 inch sides, making it 7*10*1
+from math import *
+
+print("A flap 1 inch square produces a volume of",7*10*1,"cubic inches.")  #This would be for the paper with 1 inch sides
+print("A flap 0.5 inches square produces a volume of",8*11*.5,"cubic inches.") #This would be for .5 inch sides
+x=3.1415926 #Defining x=pi
+print("A flap",x,"inches square produces a volume of",(9-2*x) * (12-2*x)*x,"cubic inches.")  #part c
+
+#EXAMPLE PRACTICE---------------------------------------------
+
+import sympy as sp  #Bringing in all commands from SymPy library
+x=sp.symbols('x')   #Setting X as a variable we can solve for
+volume=(9-2*x)*(12-2*x)*x    #L*H*W for volume
+print(volume)
+
+from math import *
+
+print("A flap 1 inch square produces a volume of",volume.subs(x,1),"cubic inches.")  #This would be for the paper with 1 inch sides
+print("A flap 0.5 inches square produces a volume of",volume.subs(x,0.5),"cubic inches.") #This would be for .5 inch sides
+c=3.1415926 #Defining x=pi
+print("A flap",c,"inches square produces a volume of",volume.subs(x,c),"cubic inches.")  #part c
+
+xvals=[1,0.5,3.1415926]
+volumes=[volume.subs(x,i) for i in xvals] #Go thru each list and substitute those values for x.
+print("Squares with side lengths",xvals,"produce volumes of",volumes)
+
+
+#-------------------------ANSWERS BEGIN HERE -------------------------------------
+
+#1a math 151 python lab 1
+x=(((e**2.0)+log(19.0))**2.0)/(2025.0+8.0**3.0)
+x=(((e**2)+log(19))**2)/(2025+8**3)
+print(x)
+
+#1b
+y=12*log(49)+tan(2*sp.pi/3)
+print(y)
+
+#2 a,b
+r=.071
+P=30000
+t=9
+m=12
+R9=P*((r/m)*(1+(r/m))**(m*t))/((1+(r/m))**(m*t)-1)
+print(R9)
+t=7
+R7=P*((r/m)*(1+(r/m))**(m*t))/((1+(r/m))**(m*t)-1)
+print(R7)
+
+#c
+print(R9*108)
+print(R7*84)
+
+
+#3
+#F=ai+bj
+x1=14
+x2=30
+y1=3
+y2=12
+
+#displacement vector?
+DV=((x2-x1),(y2-y1))
+print(DV)
+Magnitude=(sqrt((x2+x1)**2)+sqrt((y2+y1)**2))
+print(Magnitude)
+
+#3c 
+#work=force*displacement*cos(theta)
+Force=(9*Magnitude,2*Magnitude)
+Displacement=DV
+theta_rad=((16.82*pi)/180)
+Work=Force*Displacement*cos(theta_rad)
+print(Work)
+
+
+
+
+print(F)
+
+#3d
+
+
+
+
+
+
+
+
+
+((3**2)-4*5)*(2//3)+22%4

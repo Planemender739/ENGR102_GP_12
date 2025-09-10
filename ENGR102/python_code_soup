@@ -1,0 +1,49 @@
+# By submitting this assignment, I agree to the following:
+# "Aggies do not lie, cheat, or steal, or tolerate those who do."
+# "I have not given or received any unauthorized aid on this assignment."
+#
+# Name: Lane Mack
+# Section: Engr 102-511
+# Assignment: Lab Topic 2 individual
+# Date: 30 August 2025
+#
+
+#Print 1
+z=0
+x=1
+z+=x
+print(z)
+
+#Print 29 AYYYYYY
+x=10
+y=9
+z=2
+z*=x
+z+=y
+print(z) #AYYYYYYY
+
+#print 102
+x=10
+y=2
+z=10
+z*=x
+z+=y
+print(z)
+
+#print 10^14
+x=10
+y=14
+z=0
+
+x**=y
+z=x
+print(z)
+
+#print 8675
+x=90
+y=2
+z=575
+
+x**=y
+z+=x
+print(z)
