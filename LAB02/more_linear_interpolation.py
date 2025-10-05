@@ -81,5 +81,3 @@ print("At time", time, "seconds:")
 print("x5 =", x , "m")
 print("y5 =", y , "m")
 print("z5 =", z , "m")
-print("-----------------------")
-
