@@ -41,7 +41,6 @@ Odd number: True
 # reduce with de morgans laws
 
 print("Complex 1:", (not (a and not b) or (not c and b)) and (not b) or (not a and b and not c) or (a and not b))
-print("Simple 1:",  (not a and b and not c) or not b)
-
 print("Complex 2:", (not ((b or not c) and (not a or not c))) or (not (c or not (b and c))) or (a and not c) and (not a or (a and b and c) or (a and ((b and not c) or (not b)))))
+print("Simple 1:",  (not a and b and not c) or not b)
 print("Simple 2:",  a or ((not b) and c))
