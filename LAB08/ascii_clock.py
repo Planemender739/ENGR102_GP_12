@@ -5,7 +5,7 @@
 # Name: Thomas Tang
 # Section: 511
 # Assignment: 
-# Date: October 15th, 2025
+# Date: October 18th, 2025
 
 chars = {
     "0": [
@@ -16,11 +16,11 @@ chars = {
         "000",
     ],
     "1": [
-        "  1",
-        "  1",
-        "  1",
-        "  1",
-        "  1",
+        " 1 ",
+        "11 ",
+        " 1 ",
+        " 1 ",
+        "111",
     ],
     "2": [
         "222",
@@ -79,32 +79,32 @@ chars = {
         "999",
     ],
     "a": [
-        " # ",
-        "# #",
-        "###",
-        "# #",
-        "# #",
+        " A ",
+        "A A",
+        "AAA",
+        "A A",
+        "A A",
     ],
     "p": [
-        "###",
-        "# #",
-        "###",
-        "#  ",
-        "#  ",
+        "PPP",
+        "P P",
+        "PPP",
+        "P  ",
+        "P  ",
     ],
     "m": [
-        "#   #",
-        "## ##",
-        "# # #",
-        "#   #",
-        "#   #",
+        "M   M",
+        "MM MM",
+        "M M M",
+        "M   M",
+        "M   M",
     ],
     ":": [
-        "   ",
-        " # ",
-        "   ",
-        " # ",
-        "   ",
+        " ",
+        ":",
+        " ",
+        ":",
+        " ",
     ]
 }
 
@@ -118,7 +118,9 @@ clock_type = int(input().strip())
 
 print("Enter your preferred character: ", end="")
 
-char = input().strip()[0]
+char = input().strip()
+
+char = char[0] if char else ""
 
 while (char != "" and not char in "abcdeghkmnopqrsuvwxyz@$&*="):
     print("Character not permitted! Try again: ", end="")
@@ -134,6 +136,8 @@ if clock_type == 12:
     elif hours > 12:
         hours -= 12
         ampm = "pm"
+    else:
+        ampm = "am"
     time = f"{hours}:{minutes:02}"
 
 print()
@@ -145,10 +149,28 @@ for c in time + ampm:
         char_grid = chars[c]
         for i in range(5):
             grid[i] += char_grid[i]
-            grid[i] += [" "]  # space between characters
+            grid[i] += [" "]
 
 for row in grid:
+    row.pop()
+
     for i in range(len(row[0])):
         for c in row:
-            print(c[i].replace("#", char), end="")
+            print(char if len(char) != 0 and c[i] in "0123456789" else c[i], end="")
         print()
+
+# comment
+# comment
+# comment
+# comment
+# comment
+# comment
+# comment
+# comment
+# comment
+# comment
+# comment
+# comment
+# comment
+# comment
+# comment
